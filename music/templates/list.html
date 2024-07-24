@@ -39,7 +39,11 @@
     </header>
     <div class="container-fluid welcome-container m-2">
         <h4>Welcome {{ user.username }}, Happy Listening!!</h4>
+        <div class="mb-4">
+            <a class="btn btn-primary" href="{% url 'upload_song' %}"> Upload New Song </a>
+        </div> 
     </div>
+               
         <div class="row">
             <div class="col-md-4">
                 {% for song in songs %}
