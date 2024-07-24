@@ -21,7 +21,6 @@ class Folder(models.Model):
     def __str__(self):
         return self.name
 
-# Signal to create default "Favorites" folder
 @receiver(post_save, sender=User)
 def create_default_favorites_folder(sender, instance, created, **kwargs):
     if created:
