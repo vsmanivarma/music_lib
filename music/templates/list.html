@@ -35,12 +35,11 @@
                 <a href="{% url 'register' %}" class="btn btn-light">Sign Up</a>
             {% endif %}
         </div>
+
     </header>
-    <div class="container mt-4">
-        <!-- Upload Form -->
-        <div class="mb-4">
-                <a href="{% url 'upload_song' %}" class="btn btn-primary">Upload a Song</a>
-        </div>
+    <div class="container-fluid welcome-container m-2">
+        <h4>Welcome {{ user.username }}, Happy Listening!!</h4>
+    </div>
         <div class="row">
             <div class="col-md-4">
                 {% for song in songs %}
