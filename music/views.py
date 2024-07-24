@@ -72,7 +72,7 @@ def select_folder(request, song_id):
 def update_song(request, folder_id, song_id):
     folder = get_object_or_404(Folder, pk=folder_id)
     current_song = get_object_or_404(Music, pk=song_id)
-    all_songs = Music.objects.exclude(id=current_song.id)  # Exclude current song from options
+    all_songs = Music.objects.exclude(id=current_song.id)  
 
     if request.method == 'POST':
         new_song_id = request.POST.get('new_song')
@@ -105,7 +105,7 @@ def upload_song(request):
         form = MusicForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('music_list')  # Redirect to the list page after successful upload
+            return redirect('music_list')  
     else:
         form = MusicForm()
 
