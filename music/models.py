@@ -21,7 +21,10 @@ class Folder(models.Model):
     def __str__(self):
         return self.name
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 95ea6d1a68e9cc14f09b0c40a932d64659d64e35
 @receiver(post_save, sender=User)
 def create_default_favorites_folder(sender, instance, created, **kwargs):
     if created:
